@@ -312,6 +312,9 @@ body {
         0 0 30px #ff2ca8,
         0 0 50px #ff2ca8,
         0 0 80px rgba(255, 44, 168, 0.95) !important;
+
+    /* PRUEBA */
+    border: 3px solid red !important;
 }
 
 
