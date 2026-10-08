@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🇯🇵 Japan Sicko Trip</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0d0d12;
+            color: #ffffff;
+        }
+
+        .cabecera {
+            padding: 55px 20px 35px;
+            text-align: center;
+            border-bottom: 1px solid #292933;
+            background: #12121a;
+        }
+
+        .cabecera h1 {
+            margin: 0 0 12px;
+            font-size: 42px;
+        }
+
+        .cabecera p {
+            margin: 0;
+            color: #9999aa;
+            font-size: 16px;
+        }
+
+        main {
+            width: min(1000px, 92%);
+            margin: 0 auto;
+            padding: 45px 0 60px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            margin: 0 0 10px;
+            font-size: 28px;
+        }
+
+        .intro p {
+            margin: 0;
+            color: #9999aa;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            min-height: 105px;
+            padding: 22px;
+            background: #15151d;
+            border: 1px solid #292933;
+            border-radius: 15px;
+            color: #ffffff;
+            text-decoration: none;
+            transition:
+                transform 0.2s,
+                border-color 0.2s,
+                background 0.2s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-4px);
+            background: #1a1a23;
+            border-color: #555563;
+        }
+
+        .menu-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            min-width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: #20202a;
+            font-size: 28px;
+        }
+
+        .menu-texto {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .menu-texto strong {
+            font-size: 18px;
+        }
+
+        .menu-texto small {
+            color: #888895;
+            font-size: 13px;
+        }
+
+        footer {
+            padding: 25px 20px 35px;
+            text-align: center;
+            color: #666673;
+            font-size: 12px;
+        }
+
+        @media (max-width: 700px) {
+
+            .cabecera {
+                padding: 40px 20px 30px;
+            }
+
+            .cabecera h1 {
+                font-size: 32px;
+            }
+
+            main {
+                padding-top: 35px;
+            }
+
+            .menu {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-item {
+                min-height: 90px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecera">
+
+        <h1>
+            🇯🇵 Japan Sicko Trip
+        </h1>
+
+        <p>
+            Mi viaje por Japón
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <h2>
+                🗾 Mi Japón
+            </h2>
+
+            <p>
+                Todo lo que quiero visitar, ver y comprar durante mi viaje.
+            </p>
+
+        </section>
+
+
+        <nav class="menu">
+
+            <a href="mapa/index.html" class="menu-item">
+
+                <span class="menu-icon">
+                    🗾
+                </span>
+
+                <span class="menu-texto">
+
+                    <strong>
+                        Mapa Interactivo
+                    </strong>
+
+                    <small>
+                        地図 · Chizu
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="festivales/index.html" class="menu-item">
+
+                <span class="menu-icon">
+                    🎎
+                </span>
+
+                <span class="menu-texto">
+
+                    <strong>
+                        Festivales tradicionales
+                    </strong>
+
+                    <small>
+                        伝統祭り · Dentō Matsuri
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="conciertos/index.html" class="menu-item">
+
+                <span class="menu-icon">
+                    🎵
+                </span>
+
+                <span class="menu-texto">
+
+                    <strong>
+                        Conciertos de Música
+                    </strong>
+
+                    <small>
+                        音楽コンサート · Ongaku Konsāto
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="tiendas/index.html" class="menu-item">
+
+                <span class="menu-icon">
+                    🏪
+                </span>
+
+                <span class="menu-texto">
+
+                    <strong>
+                        Tiendas
+                    </strong>
+
+                    <small>
+                        店 · Mise
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="templos/index.html" class="menu-item">
+
+                <span class="menu-icon">
+                    ⛩️
+                </span>
+
+                <span class="menu-texto">
+
+                    <strong>
+                        Templos
+                    </strong>
+
+                    <small>
+                        寺院 · Jiin
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="compras/index.html" class="menu-item">
+
+                <span class="menu-icon">
+                    🛍️
+                </span>
+
+                <span class="menu-texto">
+
+                    <strong>
+                        Cosas que comprar
+                    </strong>
+
+                    <small>
+                        買い物 · Kaimono
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="flea-markets/index.html" class="menu-item">
+
+                <span class="menu-icon">
+                    🧺
+                </span>
+
+                <span class="menu-texto">
+
+                    <strong>
+                        Flea Markets
+                    </strong>
+
+                    <small>
+                        蚤の市 · Nomi no Ichi
+                    </small>
+
+                </span>
+
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <footer>
+        🇯🇵 Japan Sicko Trip · Mi viaje por Japón
+    </footer>
+
+</body>
+</html>

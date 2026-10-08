@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Festivales tradicionales - Japan Sicko Trip</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>🎎 Festivales tradicionales</h1>
+
+        <p>
+            伝統祭り — Dentō Matsuri
+        </p>
+
+        <a href="../index.html" class="volver">
+            ← Volver a Japan Sicko Trip
+        </a>
+
+    </header>
+
+
+    <main>
+
+
+        <section class="intro">
+
+            <h2>Calendario de festivales tradicionales</h2>
+
+            <p>
+                Consulta cuándo suelen celebrarse los principales matsuri
+                de Japón y descubre su historia, simbolismo y tradiciones.
+            </p>
+
+            <div class="aviso">
+
+                📅 <strong>Importante:</strong>
+                muchos festivales mantienen una época habitual cada año,
+                pero algunas fechas pueden cambiar. Las fechas exactas deben
+                comprobarse para el año concreto del viaje.
+
+            </div>
+
+        </section>
+
+
+        <!-- CALENDARIO -->
+
+        <section class="calendario-section">
+
+            <div class="calendario-cabecera">
+
+                <button id="mes-anterior" class="boton-mes">
+                    ◀
+                </button>
+
+                <h2 id="mes-titulo">
+                    Enero
+                </h2>
+
+                <button id="mes-siguiente" class="boton-mes">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="dias-semana">
+
+                <div>L</div>
+                <div>M</div>
+                <div>X</div>
+                <div>J</div>
+                <div>V</div>
+                <div>S</div>
+                <div>D</div>
+
+            </div>
+
+
+            <div id="calendario" class="calendario"></div>
+
+
+            <div class="leyenda">
+
+                <span>
+                    <span class="punto-festival"></span>
+                    Hay festivales este día
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- DETALLE DEL DÍA -->
+
+        <section
+            id="detalle-dia"
+            class="detalle-dia"
+        >
+
+            <h2>
+                Selecciona un día
+            </h2>
+
+            <p>
+                Pulsa un día marcado del calendario para ver los festivales.
+            </p>
+
+        </section>
+
+
+        <!-- LISTA -->
+
+        <section class="lista-section">
+
+            <div class="lista-cabecera">
+
+                <h2>
+                    Festivales por prefectura
+                </h2>
+
+                <p>
+                    Ordenados por prefectura y, dentro de cada una,
+                    por fecha habitual.
+                </p>
+
+            </div>
+
+
+            <div
+                id="lista-festivales"
+                class="lista-festivales"
+            ></div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

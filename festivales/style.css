@@ -1,0 +1,643 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f3f3;
+    color: #222;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+header {
+    background: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+
+header p {
+    margin: 10px 0 15px;
+    color: #666;
+    font-size: 20px;
+}
+
+
+.volver {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+
+.volver:hover {
+    border-color: #999;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+
+.intro h2 {
+    margin-top: 0;
+}
+
+
+.intro p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.aviso {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CALENDARIO
+   ========================================================= */
+
+.calendario-section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+
+.calendario-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.calendario-cabecera h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+
+.boton-mes {
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 8px;
+    width: 45px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.boton-mes:hover {
+    border-color: #777;
+    background: #f5f5f5;
+}
+
+
+/* =========================================================
+   DÍAS DE LA SEMANA
+   ========================================================= */
+
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+
+.dias-semana div {
+    text-align: center;
+    font-weight: bold;
+    color: #777;
+    padding: 10px 0;
+}
+
+
+/* =========================================================
+   CALENDARIO
+   ========================================================= */
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+
+.dia {
+    min-height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.dia:hover {
+    border-color: #888;
+    background: #f5f5f5;
+}
+
+
+.dia.vacio {
+    background: transparent;
+    border: none;
+    cursor: default;
+}
+
+
+.numero-dia {
+    font-weight: bold;
+}
+
+
+.dia.con-festival {
+    border-color: #999;
+    background: #f7f7f7;
+}
+
+
+.punto-festival {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #555;
+    margin-right: 5px;
+}
+
+
+.marca-festival {
+    display: block;
+    margin-top: 8px;
+    font-size: 11px;
+    color: #555;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   LEYENDA
+   ========================================================= */
+
+.leyenda {
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   DETALLE DEL DÍA
+   ========================================================= */
+
+.detalle-dia {
+    margin-top: 25px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+
+.detalle-dia h2 {
+    margin-top: 0;
+}
+
+
+.detalle-festival {
+    border-top: 1px solid #ddd;
+    padding: 25px 0;
+}
+
+
+.detalle-festival:first-of-type {
+    border-top: none;
+}
+
+
+.detalle-festival h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+
+.detalle-festival p {
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* =========================================================
+   IMÁGENES
+   ========================================================= */
+
+.festival-imagen {
+    width: 100%;
+    margin: 15px 0 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f3f3f3;
+}
+
+
+.festival-imagen a {
+    display: block;
+}
+
+
+.festival-imagen img {
+    display: block;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+
+.festival-imagen img:hover {
+    transform: scale(1.01);
+}
+
+
+.imagen-cargando {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 14px;
+}
+
+
+.imagen-no-disponible {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    padding: 20px;
+}
+
+
+.imagen-fuente {
+    background: #f5f5f5;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #777;
+}
+
+
+.imagen-fuente a {
+    display: inline;
+    color: #555;
+    text-decoration: none;
+}
+
+
+.imagen-fuente a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   ETIQUETAS
+   ========================================================= */
+
+.etiqueta {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 5px 9px;
+    border-radius: 6px;
+    background: #f0f0f0;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BOTÓN MAPA
+   ========================================================= */
+
+.boton-mapa {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+
+.boton-mapa:hover {
+    background: #444;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LISTA DE PREFECTURAS
+   ========================================================= */
+
+.lista-section {
+    margin-top: 30px;
+}
+
+
+.lista-cabecera {
+    margin-bottom: 20px;
+}
+
+
+.lista-cabecera h2 {
+    margin-bottom: 5px;
+}
+
+
+.lista-cabecera p {
+    color: #666;
+}
+
+
+/* =========================================================
+   DESPLEGABLE DE PREFECTURA
+   ========================================================= */
+
+.prefectura {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+
+/*
+ * Eliminamos el estilo de triángulo
+ * por defecto del navegador.
+ */
+
+.prefectura summary {
+    list-style: none;
+}
+
+
+.prefectura summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* =========================================================
+   CABECERA DE PREFECTURA
+   ========================================================= */
+
+.prefectura-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0;
+
+    padding: 20px 22px;
+
+    background: #ffffff;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.prefectura-titulo:hover {
+    background: #f5f5f5;
+}
+
+
+/*
+ * Flecha del desplegable.
+ */
+
+.prefectura-titulo::after {
+    content: "▶";
+
+    font-size: 14px;
+
+    color: #777;
+
+    transition: transform 0.2s;
+}
+
+
+.prefectura[open]
+.prefectura-titulo::after {
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   NÚMERO DE FESTIVALES
+   ========================================================= */
+
+.cantidad-festivales {
+    margin-left: auto;
+    margin-right: 20px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #f0f0f0;
+
+    color: #666;
+
+    font-size: 12px;
+
+    font-weight: normal;
+}
+
+
+/* =========================================================
+   CONTENIDO DE PREFECTURA
+   ========================================================= */
+
+.prefectura-contenido {
+    border-top: 1px solid #ddd;
+}
+
+
+/* =========================================================
+   TARJETAS DE FESTIVALES
+   ========================================================= */
+
+.festival-card {
+    padding: 25px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.festival-card:last-child {
+    border-bottom: none;
+}
+
+
+.festival-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+
+.festival-fecha {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.festival-localidad {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+.festival-info {
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+
+.festival-info strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+
+    main {
+        padding: 12px;
+    }
+
+
+    .intro,
+    .calendario-section,
+    .detalle-dia {
+        padding: 15px;
+    }
+
+
+    .dia {
+        min-height: 55px;
+        padding: 5px;
+    }
+
+
+    .marca-festival {
+        font-size: 9px;
+    }
+
+
+    .dias-semana div {
+        font-size: 12px;
+    }
+
+
+    .calendario-cabecera h2 {
+        font-size: 22px;
+    }
+
+
+    .prefectura-titulo {
+        padding: 17px 15px;
+        font-size: 18px;
+    }
+
+
+    .cantidad-festivales {
+        margin-right: 12px;
+        font-size: 11px;
+    }
+
+
+    .festival-card {
+        padding: 18px;
+    }
+
+
+    .festival-imagen img {
+        max-height: 300px;
+    }
+
+}

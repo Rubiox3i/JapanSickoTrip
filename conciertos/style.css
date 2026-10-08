@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0d0d12;
+    color: #ffffff;
+}
+
+.cabecera {
+    padding: 24px;
+    border-bottom: 1px solid #292933;
+    background: #12121a;
+}
+
+.volver {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #b8b8c8;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.volver:hover {
+    color: #ffffff;
+}
+
+.titulo h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+}
+
+.titulo p {
+    margin: 0;
+    color: #9999aa;
+}
+
+main {
+    width: min(1400px, 94%);
+    margin: 0 auto;
+    padding: 35px 0 60px;
+}
+
+.intro {
+    margin-bottom: 28px;
+}
+
+.intro h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+}
+
+.intro p {
+    margin: 0;
+    color: #aaaab7;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.filtro {
+    border: 1px solid #383845;
+    background: #181821;
+    color: #ddddE8;
+    padding: 11px 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.filtro:hover {
+    background: #242430;
+}
+
+.filtro.activo {
+    background: #ffffff;
+    color: #111111;
+    border-color: #ffffff;
+}
+
+.contador {
+    color: #888895;
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+.categoria-seccion {
+    margin-bottom: 50px;
+}
+
+.categoria-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #292933;
+    padding-bottom: 12px;
+}
+
+.categoria-titulo h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.categoria-titulo span {
+    color: #777783;
+    font-size: 13px;
+}
+
+.artistas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 22px;
+}
+
+.artista-card {
+    overflow: hidden;
+    background: #15151d;
+    border: 1px solid #292933;
+    border-radius: 15px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.artista-card:hover {
+    transform: translateY(-4px);
+    border-color: #555563;
+}
+
+.artista-imagen {
+    height: 240px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #24243a, #101018);
+}
+
+.artista-imagen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.artista-contenido {
+    padding: 18px;
+}
+
+.artista-numero {
+    color: #777783;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.artista-card h3 {
+    margin: 0 0 8px;
+    font-size: 21px;
+}
+
+.artista-genero {
+    color: #b5b5c5;
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+.artista-card p {
+    margin: 0 0 18px;
+    color: #a3a3b0;
+    line-height: 1.55;
+    font-size: 14px;
+}
+
+.favorito-btn {
+    width: 100%;
+    padding: 11px 14px;
+    border-radius: 9px;
+    border: 1px solid #383845;
+    background: #1d1d27;
+    color: #ddddE8;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.favorito-btn:hover {
+    background: #282833;
+}
+
+.favorito-btn.activo {
+    background: #25251f;
+    border-color: #777751;
+    color: #fffbd0;
+}
+
+.sin-resultados {
+    text-align: center;
+    padding: 70px 20px;
+    border: 1px dashed #33333f;
+    border-radius: 15px;
+    color: #9999a6;
+}
+
+.sin-resultados div {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.sin-resultados h3 {
+    color: #ffffff;
+    margin: 0 0 8px;
+}
+
+.sin-resultados p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   AJUSTES ESPECÍFICOS DE IMAGEN
+   ========================================================= */
+
+/* Houshou Marine */
+
+.artista-card[data-artista="Houshou Marine"] .artista-imagen {
+    background: #ffffff;
+}
+
+.artista-card[data-artista="Houshou Marine"] .artista-imagen img {
+    object-fit: contain;
+    object-position: center center;
+}
+
+
+/* Hatsune Miku */
+
+.artista-card[data-artista="Hatsune Miku"] .artista-imagen {
+    background: #ffffff;
+}
+
+.artista-card[data-artista="Hatsune Miku"] .artista-imagen img {
+    object-fit: contain;
+    object-position: center center;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .cabecera {
+        padding: 20px;
+    }
+
+    .titulo h1 {
+        font-size: 27px;
+    }
+
+    main {
+        width: 92%;
+        padding-top: 25px;
+    }
+
+    .artistas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artista-imagen {
+        height: 230px;
+    }
+
+    .categoria-titulo {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+}

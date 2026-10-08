@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🛍️ Cosas que comprar - Japan Sicko Trip</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecera">
+
+        <a href="../index.html" class="volver">
+            ← Volver
+        </a>
+
+        <div class="titulo">
+
+            <h1>
+                🛍️ Cosas que comprar
+            </h1>
+
+            <p>
+                Mi lista de compras y objetos que quiero conseguir en Japón
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <h2>
+                🎯 Mi lista de caza
+            </h2>
+
+            <p>
+                Objetos, juegos, anime, música, consolas, coleccionismo y
+                auténticos tesoros que quiero buscar durante mi viaje.
+            </p>
+
+            <div class="resumen">
+
+                <div class="resumen-item">
+                    <strong id="total-productos">0</strong>
+                    <span>Objetivos</span>
+                </div>
+
+                <div class="resumen-item">
+                    <strong id="total-favoritos">0</strong>
+                    <span>Prioritarios</span>
+                </div>
+
+                <div class="resumen-item">
+                    <strong id="total-comprados">0</strong>
+                    <span>Comprados</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <nav class="filtros">
+
+            <button
+                type="button"
+                class="filtro activo"
+                data-filtro="todos"
+            >
+                🛍️ Todos
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="anime"
+            >
+                🎌 Anime / Manga
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="musica"
+            >
+                💿 Música
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="retro"
+            >
+                🎮 Retro
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="nintendo"
+            >
+                🔴 Nintendo
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="tcg"
+            >
+                🃏 TCG
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="fisico"
+            >
+                📼 Formato físico
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="coleccionismo"
+            >
+                🏆 Coleccionismo
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="gangas"
+            >
+                💴 Buscar ganga
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="prioridad"
+            >
+                ⭐ Imprescindibles
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="favoritos"
+            >
+                ❤️ Quiero comprar
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="comprados"
+            >
+                ✅ Comprados
+            </button>
+
+        </nav>
+
+
+        <section class="controles">
+
+            <div class="busqueda">
+
+                <label for="buscador">
+                    🔎 Buscar
+                </label>
+
+                <input
+                    type="search"
+                    id="buscador"
+                    placeholder="Ej. Evangelion, Game Boy, Miku..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div class="orden">
+
+                <label for="ordenar">
+                    Ordenar
+                </label>
+
+                <select id="ordenar">
+
+                    <option value="prioridad">
+                        ⭐ Prioridad
+                    </option>
+
+                    <option value="demanda">
+                        🔥 Demanda
+                    </option>
+
+                    <option value="rareza">
+                        💎 Rareza
+                    </option>
+
+                    <option value="nombre">
+                        🔤 Nombre
+                    </option>
+
+                    <option value="categoria">
+                        📂 Categoría
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <div id="contador" class="contador"></div>
+
+
+        <div id="contenido-compras"></div>
+
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>

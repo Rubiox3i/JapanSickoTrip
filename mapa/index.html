@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mapa Interactivo - Japan Sicko Trip</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet LOCAL -->
+    <link
+        rel="stylesheet"
+        href="leaflet/leaflet.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>🗾 Mapa Interactivo</h1>
+
+        <p>
+            地図 — Chizu
+        </p>
+
+        <a
+            href="../index.html"
+            class="volver"
+        >
+            ← Volver a Japan Sicko Trip
+        </a>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==================================================
+             MAPA
+             ================================================== -->
+
+        <section class="mapa-section">
+
+            <div class="mapa-titulo">
+
+                <h2>
+                    Mi mapa de Japón
+                </h2>
+
+                <p>
+                    Busca un lugar o haz clic directamente
+                    sobre el mapa para seleccionarlo.
+                </p>
+
+            </div>
+
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    id="buscador-mapa"
+                    placeholder="🔎 Buscar un lugar en Japón..."
+                    autocomplete="off"
+                >
+
+                <div
+                    id="resultados-busqueda"
+                    class="resultados-busqueda"
+                ></div>
+
+            </div>
+
+
+            <!-- MAPA -->
+
+            <div id="map"></div>
+
+        </section>
+
+
+        <!-- ==================================================
+             MIS SITIOS
+             ================================================== -->
+
+        <section class="sitios-section">
+
+            <div class="sitios-titulo">
+
+                <div>
+
+                    <h2>
+                        📍 Mis sitios
+                    </h2>
+
+                    <p>
+                        Lugares que has guardado en el mapa.
+                    </p>
+
+                </div>
+
+
+                <span
+                    id="contador-sitios"
+                    class="contador-sitios"
+                >
+                    0 sitios
+                </span>
+
+            </div>
+
+
+            <div
+                id="lista-sitios"
+                class="lista-sitios"
+            ></div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Leaflet LOCAL -->
+
+    <script src="leaflet/leaflet.js"></script>
+
+    <!-- Nuestra aplicación -->
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
