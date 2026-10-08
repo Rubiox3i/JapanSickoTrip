@@ -287,10 +287,14 @@ body {
 }
 
 
+/* ==================================================
+   TÍTULO PRINCIPAL — NEÓN ROSA
+================================================== */
+
 .cabecera h1 {
     margin: 0 0 12px;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
     font-size: 42px;
 
@@ -301,12 +305,19 @@ body {
     letter-spacing: -1px;
 
     text-shadow:
+        0 0 2px #ffffff,
         0 0 5px #ff2ca8,
         0 0 10px #ff2ca8,
         0 0 20px #ff2ca8,
-        0 0 40px rgba(255, 44, 168, 0.8);
+        0 0 30px #ff2ca8,
+        0 0 50px #ff2ca8,
+        0 0 80px rgba(255, 44, 168, 0.95) !important;
 }
 
+
+/* ==================================================
+   SUBTÍTULO
+================================================== */
 
 .cabecera p {
     margin: 0;
