@@ -157,8 +157,8 @@ body {
 .cabecera {
     padding: 55px 20px 35px;
     text-align: center;
-    border-bottom: 1px solid #292933;
-    background: transparent;
+    border-bottom: none;
+    background: none;
 }
 
 .cabecera h1 {
@@ -215,33 +215,31 @@ main {
     display: grid;
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    gap: 30px 45px;
 }
 
 .menu-item {
     display: flex;
     align-items: center;
     gap: 18px;
-    min-height: 105px;
-    padding: 22px;
-    background: transparent;
-    border: 1px solid #292933;
-    border-radius: 15px;
+    min-height: 80px;
+    padding: 15px 10px;
+    background: none;
+    border: none;
+    border-radius: 0;
     color: #ffffff;
     text-decoration: none;
     transition:
         transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
+        color 0.2s ease,
+        text-shadow 0.2s ease;
 }
 
 .menu-item:hover {
-    transform: translateY(-4px);
-    background: rgba(26, 26, 35, 0.35);
-    border-color: #555563;
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 .menu-icon {
@@ -252,8 +250,8 @@ main {
     min-width: 55px;
     height: 55px;
     border-radius: 12px;
-    background: rgba(32, 32, 42, 0.55);
-    font-size: 28px;
+    background: none;
+    font-size: 30px;
 }
 
 .menu-texto {
@@ -270,9 +268,15 @@ main {
 }
 
 .menu-texto small {
-    color: #888895;
+    color: #aaaaB8;
     font-size: 13px;
     font-weight: 500;
+}
+
+.menu-item:hover .menu-texto strong {
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 12px rgba(255, 44, 168, 0.5);
 }
 
 .footer {
@@ -280,7 +284,7 @@ main {
     text-align: center;
     color: #666673;
     font-size: 12px;
-    border-top: 1px solid #20202a;
+    border-top: none;
 }
 
 @media (max-width: 900px) {
@@ -353,12 +357,12 @@ main {
 
     .menu {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 18px;
     }
 
     .menu-item {
-        min-height: 90px;
-        padding: 18px;
+        min-height: 75px;
+        padding: 10px 5px;
     }
 
     .menu-texto strong {
