@@ -1,1 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700;900&display=swap');
 
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    background: #08080d;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* ================================
+   MENÚ LATERAL
+================================ */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(15, 15, 25, 0.98),
+            rgba(5, 5, 12, 0.98)
+        );
+
+    border-right: 1px solid rgba(255, 0, 170, 0.35);
+
+    padding: 30px 18px;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+
+    box-shadow:
+        5px 0 30px rgba(255, 0, 170, 0.08);
+}
+
+/* Logo */
+
+.menu-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-logo h1 {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 8px rgba(255, 0, 170, 0.8),
+        0 0 20px rgba(255, 0, 170, 0.4);
+}
+
+.menu-logo p {
+    margin-top: 4px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #00eaff;
+
+    letter-spacing: 2px;
+}
+
+/* Separador */
+
+.menu-separador {
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 0, 170, 0.7),
+        transparent
+    );
+
+    margin-bottom: 18px;
+}
+
+/* Enlaces */
+
+.menu-link {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 13px 14px;
+    margin-bottom: 6px;
+
+    border-radius: 8px;
+
+    color: #cfcfd8;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.menu-link:hover {
+    color: #ffffff;
+
+    background: rgba(255, 0, 170, 0.12);
+
+    transform: translateX(4px);
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 170, 0.15);
+}
+
+/* Página activa */
+
+.menu-link.activo {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 0, 170, 0.28),
+            rgba(0, 234, 255, 0.08)
+        );
+
+    border-left: 3px solid #ff00aa;
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 170, 0.15);
+}
+
+/* Iconos */
+
+.menu-link .icono {
+    width: 28px;
+
+    margin-right: 8px;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+/* ================================
+   BOTÓN MENÚ MÓVIL
+================================ */
+
+.boton-menu {
+    display: none;
+
+    position: fixed;
+
+    top: 15px;
+    left: 15px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255, 0, 170, 0.6);
+
+    border-radius: 10px;
+
+    background: rgba(10, 10, 18, 0.95);
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 2000;
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 170, 0.3);
+}
+
+.boton-menu:hover {
+    background: rgba(255, 0, 170, 0.2);
+}
+
+/* ================================
+   CONTENIDO PRINCIPAL
+================================ */
+
+.contenido {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 30px;
+}
+
+/* ================================
+   CABECERAS DE SECCIÓN
+================================ */
+
+.cabecera-seccion {
+    position: relative;
+
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(255, 0, 170, 0.25);
+}
+
+.cabecera-seccion::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.85)
+        );
+}
+
+.cabecera-seccion-contenido {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 30px;
+}
+
+.cabecera-seccion h1 {
+    font-size: clamp(35px, 6vw, 70px);
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 0 10px rgba(255, 0, 170, 0.9),
+        0 0 30px rgba(255, 0, 170, 0.5);
+}
+
+.cabecera-seccion p {
+    margin-top: 10px;
+
+    color: #00eaff;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+/* ================================
+   TARJETAS
+================================ */
+
+.tarjeta {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25, 25, 38, 0.95),
+            rgba(10, 10, 18, 0.95)
+        );
+
+    border: 1px solid rgba(255, 0, 170, 0.18);
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(255, 0, 170, 0.5);
+
+    box-shadow:
+        0 10px 35px rgba(255, 0, 170, 0.12);
+}
+
+/* ================================
+   TÍTULOS
+================================ */
+
+.titulo {
+    color: #ffffff;
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 8px rgba(255, 0, 170, 0.5);
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    margin-top: 50px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: #777783;
+
+    font-size: 13px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ================================
+   MÓVIL
+================================ */
+
+@media (max-width: 800px) {
+
+    .menu-lateral {
+        transform: translateX(-100%);
+
+        transition: transform 0.3s ease;
+
+        width: 270px;
+
+        box-shadow:
+            10px 0 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .menu-lateral.abierto {
+        transform: translateX(0);
+    }
+
+    .boton-menu {
+        display: block;
+    }
+
+    .contenido {
+        margin-left: 0;
+
+        padding: 75px 15px 25px;
+    }
+
+    .cabecera-seccion {
+        min-height: 250px;
+    }
+
+    .cabecera-seccion h1 {
+        font-size: 40px;
+    }
+
+    .cabecera-seccion p {
+        font-size: 14px;
+    }
+
+    .tarjeta {
+        padding: 18px;
+    }
+}
+
+/* ================================
+   PANTALLAS MUY PEQUEÑAS
+================================ */
+
+@media (max-width: 450px) {
+
+    .contenido {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .cabecera-seccion {
+        min-height: 220px;
+    }
+
+    .cabecera-seccion h1 {
+        font-size: 32px;
+    }
+}
