@@ -2,32 +2,50 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Japan Sicko Trip</title>
 
     <link rel="stylesheet" href="css/estilo.css">
+
 </head>
+
 
 <body>
 
-    <!-- BOTÓN MENÚ MÓVIL -->
 
-    <button class="boton-menu" aria-label="Abrir menú">
+    <!-- =========================================
+         BOTÓN MENÚ MÓVIL
+    ========================================== -->
+
+    <button
+        class="boton-menu"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+    >
         ☰
     </button>
 
 
-    <!-- MENÚ LATERAL -->
+    <!-- =========================================
+         MENÚ LATERAL
+    ========================================== -->
 
     <aside class="menu-lateral">
 
         <div class="menu-logo">
 
-            <h1>Japan Sicko Trip</h1>
+            <h1>
+                Japan Sicko Trip
+            </h1>
 
-            <p>ジャパン・シッコ・トリップ</p>
+            <p>
+                ジャパン・シッコ・トリップ
+            </p>
 
         </div>
 
@@ -35,83 +53,151 @@
         <div class="menu-separador"></div>
 
 
-        <a href="index.html" class="menu-link activo">
-
-            <span class="icono">🏠</span>
-
-            <span>Inicio</span>
-
-        </a>
+        <nav class="navegacion">
 
 
-        <a href="mapa/index.html" class="menu-link">
+            <a
+                href="index.html"
+                class="menu-link activo"
+            >
 
-            <span class="icono">🗾</span>
+                <span class="icono">
+                    🏠
+                </span>
 
-            <span>Mapa Interactivo</span>
+                <span>
+                    Inicio
+                </span>
 
-        </a>
-
-
-        <a href="festivales/index.html" class="menu-link">
-
-            <span class="icono">🎎</span>
-
-            <span>Festivales</span>
-
-        </a>
+            </a>
 
 
-        <a href="conciertos/index.html" class="menu-link">
+            <a
+                href="mapa/index.html"
+                class="menu-link"
+            >
 
-            <span class="icono">🎵</span>
+                <span class="icono">
+                    🗾
+                </span>
 
-            <span>Conciertos</span>
+                <span>
+                    Mapa Interactivo
+                </span>
 
-        </a>
-
-
-        <a href="tiendas/index.html" class="menu-link">
-
-            <span class="icono">🏪</span>
-
-            <span>Tiendas</span>
-
-        </a>
+            </a>
 
 
-        <a href="templos/index.html" class="menu-link">
+            <a
+                href="festivales/index.html"
+                class="menu-link"
+            >
 
-            <span class="icono">⛩️</span>
+                <span class="icono">
+                    🎎
+                </span>
 
-            <span>Templos</span>
+                <span>
+                    Festivales
+                </span>
 
-        </a>
-
-
-        <a href="compras/index.html" class="menu-link">
-
-            <span class="icono">🛍️</span>
-
-            <span>Compras</span>
-
-        </a>
+            </a>
 
 
-        <a href="flea-markets/index.html" class="menu-link">
+            <a
+                href="conciertos/index.html"
+                class="menu-link"
+            >
 
-            <span class="icono">🧺</span>
+                <span class="icono">
+                    🎵
+                </span>
 
-            <span>Flea Markets</span>
+                <span>
+                    Conciertos
+                </span>
 
-        </a>
+            </a>
+
+
+            <a
+                href="tiendas/index.html"
+                class="menu-link"
+            >
+
+                <span class="icono">
+                    🏪
+                </span>
+
+                <span>
+                    Tiendas
+                </span>
+
+            </a>
+
+
+            <a
+                href="templos/index.html"
+                class="menu-link"
+            >
+
+                <span class="icono">
+                    ⛩️
+                </span>
+
+                <span>
+                    Templos
+                </span>
+
+            </a>
+
+
+            <a
+                href="compras/index.html"
+                class="menu-link"
+            >
+
+                <span class="icono">
+                    🛍️
+                </span>
+
+                <span>
+                    Compras
+                </span>
+
+            </a>
+
+
+            <a
+                href="flea-markets/index.html"
+                class="menu-link"
+            >
+
+                <span class="icono">
+                    🧺
+                </span>
+
+                <span>
+                    Flea Markets
+                </span>
+
+            </a>
+
+
+        </nav>
+
 
     </aside>
 
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+    ========================================== -->
 
-    <main class="contenido">
+    <div class="contenido">
+
+
+        <!-- CABECERA -->
 
         <header class="cabecera">
 
@@ -126,184 +212,221 @@
         </header>
 
 
-        <section class="intro">
+        <!-- CONTENIDO -->
 
-            <h2>
-                🗾 Mi Japón
-            </h2>
+        <main>
 
-            <p>
-                Todo lo que quiero visitar, ver y comprar durante mi viaje.
-            </p>
 
-        </section>
+            <section class="intro">
 
+                <h2>
+                    🗾 Mi Japón
+                </h2>
 
-        <nav class="menu">
+                <p>
+                    Todo lo que quiero visitar, ver y comprar durante mi viaje.
+                </p>
 
-            <a href="mapa/index.html" class="menu-item">
+            </section>
 
-                <span class="menu-icon">
-                    🗾
-                </span>
 
-                <span class="menu-texto">
+            <!-- =================================
+                 TARJETAS PRINCIPALES
+            ================================== -->
 
-                    <strong>
-                        Mapa Interactivo
-                    </strong>
+            <nav class="menu">
 
-                    <small>
-                        地図 · Chizu
-                    </small>
 
-                </span>
+                <a
+                    href="mapa/index.html"
+                    class="menu-item"
+                >
 
-            </a>
+                    <span class="menu-icon">
+                        🗾
+                    </span>
 
+                    <span class="menu-texto">
 
-            <a href="festivales/index.html" class="menu-item">
+                        <strong>
+                            Mapa Interactivo
+                        </strong>
 
-                <span class="menu-icon">
-                    🎎
-                </span>
+                        <small>
+                            地図 · Chizu
+                        </small>
 
-                <span class="menu-texto">
+                    </span>
 
-                    <strong>
-                        Festivales tradicionales
-                    </strong>
+                </a>
 
-                    <small>
-                        伝統祭り · Dentō Matsuri
-                    </small>
 
-                </span>
+                <a
+                    href="festivales/index.html"
+                    class="menu-item"
+                >
 
-            </a>
+                    <span class="menu-icon">
+                        🎎
+                    </span>
 
+                    <span class="menu-texto">
 
-            <a href="conciertos/index.html" class="menu-item">
+                        <strong>
+                            Festivales tradicionales
+                        </strong>
 
-                <span class="menu-icon">
-                    🎵
-                </span>
+                        <small>
+                            伝統祭り · Dentō Matsuri
+                        </small>
 
-                <span class="menu-texto">
+                    </span>
 
-                    <strong>
-                        Conciertos de Música
-                    </strong>
+                </a>
 
-                    <small>
-                        音楽コンサート · Ongaku Konsāto
-                    </small>
 
-                </span>
+                <a
+                    href="conciertos/index.html"
+                    class="menu-item"
+                >
 
-            </a>
+                    <span class="menu-icon">
+                        🎵
+                    </span>
 
+                    <span class="menu-texto">
 
-            <a href="tiendas/index.html" class="menu-item">
+                        <strong>
+                            Conciertos de Música
+                        </strong>
 
-                <span class="menu-icon">
-                    🏪
-                </span>
+                        <small>
+                            音楽コンサート · Ongaku Konsāto
+                        </small>
 
-                <span class="menu-texto">
+                    </span>
 
-                    <strong>
-                        Tiendas
-                    </strong>
+                </a>
 
-                    <small>
-                        店 · Mise
-                    </small>
 
-                </span>
+                <a
+                    href="tiendas/index.html"
+                    class="menu-item"
+                >
 
-            </a>
+                    <span class="menu-icon">
+                        🏪
+                    </span>
 
+                    <span class="menu-texto">
 
-            <a href="templos/index.html" class="menu-item">
+                        <strong>
+                            Tiendas
+                        </strong>
 
-                <span class="menu-icon">
-                    ⛩️
-                </span>
+                        <small>
+                            店 · Mise
+                        </small>
 
-                <span class="menu-texto">
+                    </span>
 
-                    <strong>
-                        Templos
-                    </strong>
+                </a>
 
-                    <small>
-                        寺院 · Jiin
-                    </small>
 
-                </span>
+                <a
+                    href="templos/index.html"
+                    class="menu-item"
+                >
 
-            </a>
+                    <span class="menu-icon">
+                        ⛩️
+                    </span>
 
+                    <span class="menu-texto">
 
-            <a href="compras/index.html" class="menu-item">
+                        <strong>
+                            Templos
+                        </strong>
 
-                <span class="menu-icon">
-                    🛍️
-                </span>
+                        <small>
+                            寺院 · Jiin
+                        </small>
 
-                <span class="menu-texto">
+                    </span>
 
-                    <strong>
-                        Cosas que comprar
-                    </strong>
+                </a>
 
-                    <small>
-                        買い物 · Kaimono
-                    </small>
 
-                </span>
+                <a
+                    href="compras/index.html"
+                    class="menu-item"
+                >
 
-            </a>
+                    <span class="menu-icon">
+                        🛍️
+                    </span>
 
+                    <span class="menu-texto">
 
-            <a href="flea-markets/index.html" class="menu-item">
+                        <strong>
+                            Cosas que comprar
+                        </strong>
 
-                <span class="menu-icon">
-                    🧺
-                </span>
+                        <small>
+                            買い物 · Kaimono
+                        </small>
 
-                <span class="menu-texto">
+                    </span>
 
-                    <strong>
-                        Flea Markets
-                    </strong>
+                </a>
 
-                    <small>
-                        蚤の市 · Nomi no Ichi
-                    </small>
 
-                </span>
+                <a
+                    href="flea-markets/index.html"
+                    class="menu-item"
+                >
 
-            </a>
+                    <span class="menu-icon">
+                        🧺
+                    </span>
 
-        </nav>
+                    <span class="menu-texto">
 
-    </main>
+                        <strong>
+                            Flea Markets
+                        </strong>
 
+                        <small>
+                            蚤の市 · Nomi no Ichi
+                        </small>
 
-    <!-- FOOTER -->
+                    </span>
 
-    <footer class="footer">
+                </a>
 
-        Japan Sicko Trip · Mi viaje por Japón
 
-    </footer>
+            </nav>
+
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            Japan Sicko Trip · Mi viaje por Japón
+
+        </footer>
+
+
+    </div>
 
 
     <!-- JAVASCRIPT -->
 
     <script src="js/menu.js"></script>
+
 
 </body>
 
