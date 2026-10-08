@@ -31,7 +31,7 @@ body {
             rgba(7, 7, 12, 0.78),
             rgba(7, 7, 12, 0.88)
         ),
-        url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=2400&q=85");
+        url("../images/fondo-japon.jpg");
 
     background-size: cover;
 
@@ -56,8 +56,8 @@ body {
 
     background:
         linear-gradient(
-            rgba(13, 13, 18, 0.25),
-            rgba(13, 13, 18, 0.25)
+            rgba(13, 13, 18, 0.20),
+            rgba(13, 13, 18, 0.20)
         );
 }
 
@@ -287,7 +287,8 @@ body {
 
     text-align: center;
 
-    border-bottom: 1px solid rgba(41, 41, 51, 0.85);
+    border-bottom:
+        1px solid rgba(41, 41, 51, 0.85);
 
     background:
         rgba(18, 18, 26, 0.88);
