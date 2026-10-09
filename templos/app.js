@@ -51,7 +51,7 @@ function normalizar(valor) {
 }
 
 function urlImagen(archivo) {
-  return "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(archivo);
+  return "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(archivo) + "?width=640";
 }
 
 function urlMapa(templo) {
@@ -67,7 +67,7 @@ function crearTarjeta(templo) {
   return `
     <article class="templo-card">
       <div class="templo-imagen">
-        <img src="${urlImagen(templo.foto)}" alt="${escaparHTML(templo.nombre)} en ${escaparHTML(templo.ciudad)}" loading="lazy">
+        <img src="${urlImagen(templo.foto)}" alt="${escaparHTML(templo.nombre)} en ${escaparHTML(templo.ciudad)}" loading="lazy" decoding="async" fetchpriority="low">
         <span class="etiqueta-tipo">${escaparHTML(templo.tipo === "Budista" ? "TEMPLO BUDISTA" : "SANTUARIO SINTOÍSTA")}</span>
         <button class="boton-favorito${esFavorito ? " activo" : ""}" type="button" data-favorito="${escaparHTML(templo.nombre)}" aria-pressed="${esFavorito}" aria-label="${esFavorito ? "Quitar de favoritos" : "Añadir a favoritos"}: ${escaparHTML(templo.nombre)}" title="${esFavorito ? "Quitar de favoritos" : "Añadir a favoritos"}">${esFavorito ? "♥" : "♡"}</button>
       </div>

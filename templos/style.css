@@ -12,7 +12,7 @@ html { min-height: 100%; scroll-behavior: smooth; }
 body {
   min-height: 100vh; margin: 0; color: var(--texto);
   font-family: "Zen Kaku Gothic Antique", Arial, sans-serif; line-height: 1.65;
-  background: linear-gradient(rgba(7,7,19,.83),rgba(7,7,19,.94) 40%,#090914),url("../images/fondo-japon.jpg") center top / cover fixed no-repeat;
+  background: linear-gradient(rgba(7,7,19,.83),rgba(7,7,19,.94) 40%,#090914),url("../images/fondo-japon.jpg") center top / cover scroll no-repeat;
 }
 button,input { font: inherit; color: inherit; }
 a { color: inherit; }
