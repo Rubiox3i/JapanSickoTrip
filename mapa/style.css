@@ -346,3 +346,190 @@ main {
     }
 
 }
+
+/* Identidad visual compartida y distribución móvil */
+body {
+    background: linear-gradient(rgba(7, 7, 19, .83), rgba(7, 7, 19, .94) 40%, #090914),
+        url("../images/fondo-japon.jpg") center top / cover scroll no-repeat;
+    color: #fff;
+    font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+}
+
+.cabecera-mapa {
+    text-align: initial;
+}
+
+.cabecera-titulo h1 {
+    color: #fff;
+}
+
+main {
+    max-width: 1400px;
+    padding: 28px;
+}
+
+.mapa-section,
+.sitios-section {
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 16px;
+    background: linear-gradient(120deg, rgba(21, 13, 37, .96), rgba(12, 17, 34, .94));
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .32);
+}
+
+.mapa-titulo h2,
+.sitios-titulo h2 {
+    color: #fff;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: clamp(18px, 2.4vw, 24px);
+    line-height: 1.5;
+}
+
+.mapa-titulo p,
+.sitios-titulo p,
+.sitio-card-info p {
+    color: #ded9e5;
+    line-height: 1.7;
+}
+
+#buscador-mapa {
+    min-height: 48px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    background: rgba(5, 7, 19, .82);
+    color: #fff;
+}
+
+#buscador-mapa::placeholder {
+    color: #bcb5c6;
+}
+
+#buscador-mapa:focus {
+    border-color: #42dfff;
+    box-shadow: 0 0 0 3px rgba(66, 223, 255, .15);
+}
+
+.resultado-busqueda,
+.resultado-busqueda-mensaje {
+    border-color: rgba(255, 255, 255, .14);
+    background: #151323;
+    color: #fff;
+}
+
+.resultado-busqueda:hover {
+    background: #282039;
+}
+
+#map {
+    min-height: 420px;
+    border: 1px solid rgba(66, 223, 255, .3);
+    border-radius: 13px;
+}
+
+.contador-sitios {
+    border: 1px solid rgba(255, 60, 158, .34);
+    background: rgba(255, 60, 158, .12);
+    color: #ffd5eb;
+}
+
+.sitio-card {
+    border-color: rgba(255, 255, 255, .12);
+    background: rgba(6, 8, 22, .65);
+}
+
+.sitio-card-info h3 {
+    color: #fff;
+}
+
+.sitio-card-acciones button {
+    min-height: 42px;
+    border-color: rgba(66, 223, 255, .35);
+    background: rgba(66, 223, 255, .1);
+    color: #e8fbff;
+}
+
+.sitio-card-acciones button:hover {
+    background: rgba(66, 223, 255, .2);
+}
+
+.leaflet-container {
+    font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 18px 14px 30px;
+    }
+
+    .mapa-section,
+    .sitios-section {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .mapa-titulo h2,
+    .sitios-titulo h2 {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .mapa-titulo p,
+    .sitios-titulo p {
+        font-size: 13px;
+    }
+
+    .buscador {
+        margin: 16px 0;
+    }
+
+    #map {
+        height: min(62svh, 520px);
+        min-height: 360px;
+    }
+
+    .sitios-section {
+        margin-top: 16px;
+    }
+
+    .sitios-titulo {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sitio-card {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 13px;
+    }
+
+    .sitio-card-icono {
+        width: 36px;
+        min-width: 36px;
+        height: 36px;
+        font-size: 25px;
+    }
+
+    .sitio-card-info h3 {
+        overflow-wrap: anywhere;
+        font-size: 15px;
+    }
+
+    .sitio-card-info p {
+        font-size: 12px;
+    }
+
+    .sitio-card-acciones {
+        margin-top: 10px;
+    }
+
+    .sitio-card-acciones button {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .sitios-titulo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
