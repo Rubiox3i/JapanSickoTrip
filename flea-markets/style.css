@@ -423,3 +423,47 @@ main {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* Tema Japan Sicko Trip, en línea con el mapa interactivo. */
+body { color:#fff; font-family:"Zen Kaku Gothic Antique",Arial,sans-serif; background:linear-gradient(rgba(7,7,19,.83),rgba(7,7,19,.94) 40%,#090914),url("../images/fondo-japon.jpg") center top/cover fixed no-repeat; }
+main { width:100%; max-width:1400px; padding:28px 28px 42px; }
+.introduccion.intro { min-height:200px; margin:0 0 26px; padding:30px 38px; border:1px solid rgba(255,255,255,.12); border-radius:16px; background:linear-gradient(110deg,rgba(21,13,37,.94),rgba(12,17,34,.9)); box-shadow:0 15px 45px rgba(0,0,0,.32); }
+.introduccion.intro h2 { margin:0 0 10px; color:#fff; font-family:"Mochiy Pop One",sans-serif; font-size:clamp(22px,3vw,33px); line-height:1.55; }
+.introduccion.intro p { max-width:740px; margin:0; color:#ded9e5; font-size:14px; line-height:1.9; }
+.aviso { display:flex; align-items:flex-start; gap:12px; max-width:820px; margin-top:17px; padding:12px 15px; border:1px solid rgba(255,189,98,.26); border-radius:10px; background:rgba(255,189,98,.06); }
+.aviso strong { color:#ffe0ab; font-size:12px; white-space:nowrap; }
+.aviso span { color:#d8d2df; font-size:11px; line-height:1.6; }
+.filtros { gap:9px; margin:0 0 16px; padding:20px; border:1px solid rgba(255,255,255,.12); border-radius:14px; background:rgba(17,17,34,.88); }
+.filtro { min-height:38px; padding:8px 12px; border:1px solid rgba(255,255,255,.14); border-radius:9px; background:rgba(255,255,255,.035); color:#ded9e5; font-family:inherit; font-size:11px; }
+.filtro:hover { border-color:rgba(255,60,158,.55); background:rgba(255,60,158,.08); }
+.filtro.activo { border-color:#ff3c9e; background:rgba(255,60,158,.14); color:#ffc1e1; }
+.contador { margin:0 0 18px; color:#b9f5ff; font-size:12px; }
+.flea-seccion { margin:0 0 26px; padding:22px; border:1px solid rgba(255,255,255,.12); border-top-color:rgba(66,223,255,.35); border-radius:16px; background:linear-gradient(145deg,rgba(17,17,34,.96),rgba(11,11,25,.96)); box-shadow:0 15px 40px rgba(0,0,0,.25); }
+.seccion-titulo { margin-bottom:18px; padding-bottom:13px; border-bottom:1px solid rgba(255,255,255,.1); }
+.seccion-titulo h2 { color:#fff; font-family:"Mochiy Pop One",sans-serif; font-size:19px; }
+.seccion-titulo span { color:#9defff; font-size:11px; }
+.flea-grid { grid-template-columns:repeat(auto-fill,minmax(min(100%,275px),1fr)); gap:17px; }
+.flea-card { border-color:rgba(255,255,255,.12); border-radius:14px; background:linear-gradient(160deg,rgba(22,20,38,.98),rgba(12,13,27,.98)); }
+.flea-card:hover { border-color:rgba(255,60,158,.4); box-shadow:0 13px 32px rgba(0,0,0,.3),0 0 20px rgba(255,60,158,.06); }
+.flea-imagen { height:215px; background:radial-gradient(ellipse at 70% 25%,rgba(156,114,255,.2),transparent 55%),#10101d; }
+.flea-contenido { padding:16px; }
+.flea-numero { color:#ff9bd1; font-size:10px; letter-spacing:1px; }
+.flea-card h3 { color:#fff; font-family:"Mochiy Pop One",sans-serif; font-size:15px; line-height:1.6; }
+.flea-subtitulo { color:#b9f5ff; font-size:11px; }
+.dato { border-color:rgba(255,255,255,.1); background:rgba(255,255,255,.035); }
+.dato-label { color:#aaa3b3; }
+.dato-valor { color:#eeeaf2; font-size:12px; }
+.flea-card p { color:#c7c2d1; font-size:12px; line-height:1.7; }
+.etiqueta { border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.05); color:#ded9e5; }
+.importancia,.ganga { border:1px solid rgba(255,255,255,.1); border-left:3px solid #9c72ff; border-radius:9px; background:rgba(255,255,255,.035); }
+.importancia.imprescindible { border-left-color:#ffbd62; }
+.importancia strong,.ganga strong { color:#ffe0ab; }
+.importancia span,.ganga span { color:#c7c2d1; font-size:11px; }
+.ubicacion { color:#9defff; font-size:11px; }
+.flea-btn { border-color:rgba(255,255,255,.14); border-radius:9px; background:rgba(255,255,255,.04); color:#e5e0eb; font-family:inherit; font-size:11px; }
+.flea-btn:hover { border-color:rgba(66,223,255,.5); background:rgba(66,223,255,.07); }
+.flea-btn.favorito.activo { border-color:rgba(255,60,158,.5); background:rgba(255,60,158,.1); color:#ffc1e1; }
+.sin-resultados { border-color:rgba(255,255,255,.2); color:#c7c2d1; }
+.sin-resultados h3 { font-family:"Mochiy Pop One",sans-serif; font-size:17px; }
+@media(max-width:750px) { main { padding:24px 18px 32px; } .introduccion.intro { min-height:0; padding:22px 20px; } .flea-seccion { padding:17px; } .flea-grid { grid-template-columns:1fr; } .aviso { flex-direction:column; gap:3px; } }
+@media(max-width:420px) { main { padding-right:13px; padding-left:13px; } .cabecera-mapa { padding-right:14px; padding-left:14px; } .introduccion.intro { padding:19px 16px; } .filtros { padding:14px; } .filtro { min-height:44px; padding-right:10px; padding-left:10px; } .flea-seccion { padding:14px; } .flea-contenido { padding:14px; } .flea-btn { min-height:44px; } }

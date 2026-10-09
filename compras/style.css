@@ -561,3 +561,52 @@ main {
     }
 
 }
+
+/* Tema Japan Sicko Trip, en línea con el mapa interactivo. */
+body { color:#fff; font-family:"Zen Kaku Gothic Antique",Arial,sans-serif; background:linear-gradient(rgba(7,7,19,.83),rgba(7,7,19,.94) 40%,#090914),url("../images/fondo-japon.jpg") center top/cover fixed no-repeat; }
+main { width:100%; max-width:1400px; padding:28px 28px 42px; }
+.introduccion.intro { min-height:210px; margin:0 0 26px; padding:30px 38px; border:1px solid rgba(255,255,255,.12); border-radius:16px; background:linear-gradient(110deg,rgba(21,13,37,.94),rgba(12,17,34,.9)); box-shadow:0 15px 45px rgba(0,0,0,.32); }
+.introduccion.intro h2 { margin:0 0 10px; color:#fff; font-family:"Mochiy Pop One",sans-serif; font-size:clamp(22px,3vw,33px); line-height:1.55; }
+.introduccion.intro p { max-width:740px; margin:0; color:#ded9e5; font-size:14px; line-height:1.9; }
+.resumen { display:grid; grid-template-columns:repeat(3,minmax(100px,1fr)); gap:10px; max-width:660px; margin:20px 0 0; }
+.resumen-item { padding:11px 14px; border:1px solid rgba(66,223,255,.2); border-radius:10px; background:rgba(66,223,255,.045); }
+.resumen-item strong { color:#b9f5ff; font-family:"Mochiy Pop One",sans-serif; font-size:20px; }
+.resumen-item span { color:#c7c2d1; font-size:10px; }
+.filtros { gap:9px; margin:0 0 16px; padding:20px; border:1px solid rgba(255,255,255,.12); border-radius:14px; background:rgba(17,17,34,.88); }
+.filtro { min-height:38px; padding:8px 12px; border:1px solid rgba(255,255,255,.14); border-radius:9px; background:rgba(255,255,255,.035); color:#ded9e5; font-family:inherit; font-size:11px; }
+.filtro:hover { border-color:rgba(255,60,158,.55); background:rgba(255,60,158,.08); }
+.filtro.activo { border-color:#ff3c9e; background:rgba(255,60,158,.14); color:#ffc1e1; }
+.controles { grid-template-columns:minmax(0,1fr) 220px; gap:14px; margin-bottom:16px; padding:20px; border:1px solid rgba(255,255,255,.12); border-radius:14px; background:rgba(17,17,34,.88); }
+.busqueda label,.orden label { color:#c7c2d1; font-size:10px; font-weight:700; letter-spacing:1.5px; }
+.busqueda input,.orden select { min-height:45px; border:1px solid rgba(255,60,158,.25); border-radius:9px; background:rgba(6,6,17,.8); color:#fff; font-family:inherit; }
+.busqueda input:focus,.orden select:focus { border-color:#ff3c9e; box-shadow:0 0 0 3px rgba(255,60,158,.08); }
+.contador { margin:0 0 18px; color:#b9f5ff; font-size:12px; }
+.seccion { margin:0 0 26px; padding:22px; border:1px solid rgba(255,255,255,.12); border-radius:16px; background:linear-gradient(145deg,rgba(17,17,34,.96),rgba(11,11,25,.96)); box-shadow:0 15px 40px rgba(0,0,0,.25); }
+.seccion-titulo { margin-bottom:18px; padding-bottom:13px; border-bottom:1px solid rgba(255,255,255,.1); }
+.seccion-titulo h2 { color:#fff; font-family:"Mochiy Pop One",sans-serif; font-size:19px; }
+.seccion-titulo span { color:#9defff; font-size:11px; }
+.productos-grid { grid-template-columns:repeat(auto-fill,minmax(min(100%,275px),1fr)); gap:17px; }
+.producto-card { border-color:rgba(255,255,255,.12); border-radius:14px; background:linear-gradient(160deg,rgba(22,20,38,.98),rgba(12,13,27,.98)); }
+.producto-card:hover { border-color:rgba(255,60,158,.4); box-shadow:0 13px 32px rgba(0,0,0,.3),0 0 20px rgba(255,60,158,.06); }
+.producto-imagen { height:220px; background:radial-gradient(ellipse at 70% 25%,rgba(156,114,255,.2),transparent 55%),#10101d; }
+.producto-imagen img { background:#10101d; }
+.producto-contenido { padding:16px; }
+.producto-categoria { color:#ff9bd1; font-size:10px; font-weight:700; letter-spacing:1px; }
+.producto-card h3 { color:#fff; font-family:"Mochiy Pop One",sans-serif; font-size:15px; line-height:1.6; }
+.producto-descripcion { color:#c7c2d1; font-size:12px; line-height:1.7; }
+.etiqueta,.tienda-chip { border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.05); color:#ded9e5; }
+.valoracion,.info-precio,.estado { border-color:rgba(255,255,255,.1); background:rgba(255,255,255,.035); }
+.valoracion-label,.estado span { color:#aaa3b3; }
+.valoracion-valor,.info-precio span { color:#e5e0eb; }
+.info-precio { border-color:rgba(66,223,255,.18); }
+.info-precio strong,.tiendas-recomendadas strong { color:#b9f5ff; }
+.estado { border-left-color:#9c72ff; }
+.estado.comprado { border-left-color:#55d6a2; }
+.compra-btn { border-color:rgba(255,255,255,.14); border-radius:9px; background:rgba(255,255,255,.04); color:#e5e0eb; font-family:inherit; }
+.compra-btn:hover { border-color:rgba(66,223,255,.5); background:rgba(66,223,255,.07); }
+.compra-btn.favorito.activo { border-color:rgba(255,189,98,.5); background:rgba(255,189,98,.1); color:#ffe0ab; }
+.compra-btn.comprado-btn.activo { border-color:rgba(85,214,162,.5); background:rgba(85,214,162,.1); color:#b6f2d7; }
+.sin-resultados { border-color:rgba(255,255,255,.2); color:#c7c2d1; }
+.sin-resultados h3 { font-family:"Mochiy Pop One",sans-serif; font-size:17px; }
+@media(max-width:750px) { main { padding:24px 18px 32px; } .introduccion.intro { min-height:0; padding:22px 20px; } .resumen { grid-template-columns:repeat(3,minmax(0,1fr)); } .controles { grid-template-columns:1fr; } .seccion { padding:17px; } .productos-grid { grid-template-columns:1fr; } .botones { grid-template-columns:1fr 1fr; } .compra-btn.favorito { grid-column:1/-1; } }
+@media(max-width:420px) { main { padding-right:13px; padding-left:13px; } .cabecera-mapa { padding-right:14px; padding-left:14px; } .introduccion.intro { padding:19px 16px; } .resumen { gap:7px; } .resumen-item { padding:9px 7px; } .resumen-item strong { font-size:18px; } .resumen-item span { font-size:9px; } .filtros,.controles { padding:14px; } .filtro { min-height:44px; padding-right:10px; padding-left:10px; } .compra-btn { min-height:44px; } .seccion { padding:14px; } .producto-contenido { padding:14px; } }
