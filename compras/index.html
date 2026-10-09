@@ -3,49 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090914">
 
     <title>🛍️ Cosas que comprar - Japan Sicko Trip</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../seccion-theme.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="cabecera">
-
-        <a href="../index.html" class="volver">
-            ← Volver
-        </a>
-
-        <div class="titulo">
-
-            <h1>
-                🛍️ Cosas que comprar
-            </h1>
-
-            <p>
-                Mi lista de compras y objetos que quiero conseguir en Japón
-            </p>
-
+    <header class="cabecera-mapa">
+        <div class="cabecera-contenido">
+            <div class="marca" aria-label="Japan Sicko Trip">
+                <span class="marca-icono" aria-hidden="true">🗾</span>
+                <span class="marca-texto">JAPAN <span>SICKO TRIP</span></span>
+            </div>
+            <div class="cabecera-titulo">
+                <p class="titulo-japones">日本を旅しよう</p>
+                <h1>LISTA DE <span>COMPRAS</span></h1>
+                <p class="subtitulo-cabecera">買い物 — Kaimono</p>
+            </div>
+            <span></span>
         </div>
-
     </header>
 
 
     <main>
 
-        <section class="intro">
+        <section class="introduccion intro">
 
-            <h2>
-                🎯 Mi lista de caza
-            </h2>
+            <div class="introduccion-texto">
+                <span class="etiqueta-seccion">COLECCIONISMO · CULTURA POP · HALLAZGOS</span>
+                <h2>Tu lista de <span>hallazgos.</span></h2>
 
-            <p>
-                Objetos, juegos, anime, música, consolas, coleccionismo y
-                auténticos tesoros que quiero buscar durante mi viaje.
-            </p>
+                <p>
+                    Objetos, juegos, anime, música, consolas y auténticos tesoros
+                    que quieres encontrar durante tu viaje por Japón.
+                </p>
 
-            <div class="resumen">
+                <div class="resumen">
 
                 <div class="resumen-item">
                     <strong id="total-productos">0</strong>
@@ -62,6 +62,12 @@
                     <span>Comprados</span>
                 </div>
 
+                </div>
+            </div>
+            <div class="introduccion-decoracion" aria-hidden="true">
+                <span class="decoracion-kanji">買物</span>
+                <span class="decoracion-punto punto-rosa"></span>
+                <span class="decoracion-punto punto-azul"></span>
             </div>
 
         </section>
@@ -230,6 +236,12 @@
     </main>
 
 
+    <footer class="pie-pagina">
+        <span class="pie-marca">JAPAN SICKO TRIP <span>日本を旅しよう</span></span>
+        <span>Tu viaje. Tus lugares. Tu Japón.</span>
+    </footer>
+
+    <script src="../menu.js"></script>
     <script src="app.js"></script>
 
 </body>

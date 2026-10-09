@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090914">
+  <title>Templos y santuarios | Japan Sicko Trip</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera-mapa">
+    <div class="cabecera-contenido">
+      <div class="marca" aria-label="Japan Sicko Trip">
+        <span class="marca-icono" aria-hidden="true">🗾</span>
+        <span class="marca-texto">JAPAN <span>SICKO TRIP</span></span>
+      </div>
+      <div class="cabecera-titulo">
+        <p class="titulo-japones">日本を旅しよう</p>
+        <h1>TEMPLOS <span>Y SANTUARIOS</span></h1>
+        <p class="subtitulo-cabecera">寺院と神社 — Jiin to Jinja</p>
+      </div>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="introduccion">
+      <div class="introduccion-texto">
+        <span class="etiqueta-seccion">TRADICIÓN · HISTORIA · CULTURA</span>
+        <h2>Descubre el Japón <span>espiritual.</span></h2>
+        <p>Explora templos budistas y santuarios sintoístas de Japón. Encuentra lugares para tu viaje y guarda tus favoritos.</p>
+      </div>
+      <div class="introduccion-decoracion" aria-hidden="true">
+        <span class="decoracion-kanji">神社</span>
+        <span class="decoracion-punto punto-rosa"></span>
+        <span class="decoracion-punto punto-azul"></span>
+      </div>
+    </section>
+
+    <section class="lugares-section" aria-labelledby="titulo-lugares">
+      <div class="seccion-cabecera">
+        <div class="seccion-cabecera-texto">
+          <span class="numero-seccion">01 / EXPLORAR</span>
+          <h2 id="titulo-lugares"><span class="icono-titulo" aria-hidden="true">⛩</span> Templos de Japón</h2>
+          <p>Busca por nombre o ciudad, filtra la lista y guarda los lugares que quieras visitar.</p>
+        </div>
+        <span class="estado-mapa"><span class="estado-punto"></span> GUÍA DE TEMPLOS</span>
+      </div>
+
+      <div class="herramientas">
+        <label class="etiqueta-buscador" for="buscador">BUSCAR LUGAR</label>
+        <div class="buscador-campo">
+          <span class="buscador-icono" aria-hidden="true">⌕</span>
+          <input id="buscador" type="search" placeholder="Ej.: Sensō-ji, Kyoto, santuario..." autocomplete="off">
+          <span class="buscador-pais">JAPÓN 🇯🇵</span>
+        </div>
+        <div class="filtros-grupo">
+          <span class="filtros-etiqueta">REGIÓN</span>
+          <div class="filtros" id="filtros-region" aria-label="Filtrar por región">
+            <button class="filtro activo" type="button" data-region="Todas" aria-pressed="true">Todas</button>
+            <button class="filtro" type="button" data-region="Kyushu" aria-pressed="false">Kyushu</button>
+            <button class="filtro" type="button" data-region="Kansai" aria-pressed="false">Kansai</button>
+            <button class="filtro" type="button" data-region="Kanto" aria-pressed="false">Kanto</button>
+            <button class="filtro" type="button" data-region="Hokkaido" aria-pressed="false">Hokkaido</button>
+          </div>
+        </div>
+        <div class="filtros-grupo">
+          <span class="filtros-etiqueta">TIPO Y LISTAS</span>
+          <div class="filtros" id="filtros-tipo" aria-label="Filtrar por tipo">
+            <button class="filtro activo" type="button" data-tipo="Todos" aria-pressed="true">Todos</button>
+            <button class="filtro" type="button" data-tipo="Budista" aria-pressed="false">Budistas</button>
+            <button class="filtro" type="button" data-tipo="Sintoísta" aria-pressed="false">Sintoístas</button>
+            <button class="filtro filtro-rosa" type="button" id="solo-imprescindibles" aria-pressed="false">★ Imprescindibles</button>
+            <button class="filtro filtro-azul" type="button" id="solo-favoritos" aria-pressed="false">♥ Mis favoritos</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="resultados-cabecera">
+        <p class="contador" id="contador" aria-live="polite"></p>
+        <span class="contador-nota">LUGARES PARA TU PRÓXIMO VIAJE</span>
+      </div>
+      <section class="templos-grid" id="templos-grid" aria-label="Templos y santuarios"></section>
+      <div class="sin-resultados" id="sin-resultados" hidden>
+        <div aria-hidden="true">⛩️</div>
+        <h3>No encontramos ese lugar</h3>
+        <p>Prueba otra búsqueda o cambia los filtros seleccionados.</p>
+      </div>
+    </section>
+
+    <nav class="migas" aria-label="Navegación del sitio"><span aria-current="page">Templos</span></nav>
+  </main>
+
+  <footer class="pie-pagina">
+    <span class="pie-marca">JAPAN SICKO TRIP <span>日本を旅しよう</span></span>
+    <span>Tu viaje. Tus lugares. Tu Japón.</span>
+  </footer>
+
+  <script src="../menu.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
