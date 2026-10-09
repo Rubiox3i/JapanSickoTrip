@@ -1,0 +1,211 @@
+body {
+    color: #fff;
+    background: linear-gradient(rgba(7, 7, 19, .83), rgba(7, 7, 19, .94) 40%, #090914),
+        url("../images/fondo-japon.jpg") center top / cover scroll no-repeat;
+    font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+}
+
+.cabecera-mapa {
+    padding-top: 24px;
+}
+
+.quick-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1120px;
+    margin: 0 auto 28px;
+    padding: 0 22px;
+}
+
+.quick-nav a {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    padding: 9px 14px;
+    border: 1px solid rgba(66, 223, 255, .28);
+    border-radius: 999px;
+    background: rgba(66, 223, 255, .07);
+    color: #e8fbff;
+    font-size: 12px;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.quick-nav a:hover {
+    border-color: rgba(255, 60, 158, .6);
+    background: rgba(255, 60, 158, .12);
+}
+
+.transporte-intro {
+    max-width: 1344px;
+    margin: 28px auto;
+}
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 28px 45px;
+}
+
+.section-heading h2,
+.useful-links h2 {
+    color: #fff;
+    font-family: "Mochiy Pop One", sans-serif;
+    line-height: 1.55;
+}
+
+.section-heading p,
+.transport-item p,
+.transport-item ul,
+.useful-links > p {
+    color: #ded9e5;
+}
+
+.transport-grid {
+    gap: 18px;
+}
+
+.transport-item {
+    padding: 23px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 16px;
+    background: linear-gradient(120deg, rgba(21, 13, 37, .94), rgba(12, 17, 34, .92));
+    box-shadow: 0 15px 38px rgba(0, 0, 0, .25);
+    scroll-margin-top: 22px;
+}
+
+.transport-item h3 {
+    color: #fff;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.item-number {
+    color: #ff9bd1;
+}
+
+.transport-item li::marker {
+    color: #42dfff;
+}
+
+.tip {
+    padding: 12px 14px;
+    border: 1px solid rgba(66, 223, 255, .22);
+    border-left: 2px solid #42dfff;
+    border-radius: 0 10px 10px 0;
+    background: rgba(66, 223, 255, .06);
+    color: #e8fbff;
+}
+
+.tip strong {
+    color: #ff9bd1;
+}
+
+.link-list a,
+footer a {
+    color: #ff9bd1;
+}
+
+footer {
+    border-color: rgba(255, 60, 158, .18);
+    color: #c8c1d0;
+}
+
+@media (max-width: 700px) {
+    .cabecera-mapa {
+        padding-top: 18px;
+    }
+
+    .transporte-intro {
+        margin: 18px 14px 16px;
+        padding: 20px 16px;
+    }
+
+    main {
+        padding: 18px 14px 32px;
+    }
+
+    .quick-nav {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin: 0 0 18px;
+        padding: 2px 14px 10px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scrollbar-width: thin;
+    }
+
+    .quick-nav a {
+        flex: 0 0 auto;
+        min-height: 40px;
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .section-heading {
+        margin-bottom: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    .transport-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 13px;
+    }
+
+    .transport-item {
+        min-width: 0;
+        padding: 18px 16px;
+        border-radius: 14px;
+    }
+
+    .transport-item h3 {
+        font-size: 17px;
+        overflow-wrap: anywhere;
+    }
+
+    .transport-item p,
+    .transport-item ul {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .transport-item ul {
+        padding-left: 18px;
+    }
+
+    .tip {
+        font-size: 12px;
+    }
+
+    .useful-links {
+        margin: 42px auto 0;
+    }
+
+    .link-list {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .link-list a {
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        font-size: 13px;
+    }
+
+    footer {
+        margin-top: 34px;
+    }
+}

@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transporte en Japón | Japan Sicko Trip</title>
+
+    <meta name="description" content="Guía de transporte en Japón: Shinkansen, metro, tarjetas IC, autobuses, ferris y alquiler de coches y motos.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Kaku+Gothic+Antique:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../seccion-theme.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --rojo: #ff4057;
+            --rosa: #ff7890;
+            --blanco: #ffffff;
+            --texto: #f5f3f7;
+            --texto-suave: #d1ccd8;
+            --borde: rgba(255, 255, 255, 0.20);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 30px;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Zen Kaku Gothic Antique", sans-serif;
+            color: var(--texto);
+            background-color: #08070c;
+            background-image:
+                linear-gradient(
+                    rgba(5, 5, 10, 0.58),
+                    rgba(5, 5, 10, 0.88)
+                ),
+                url("../images/fondo-japon.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .topbar {
+            width: 100%;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .brand {
+            font-family: "Mochiy Pop One", sans-serif;
+            font-size: 17px;
+            color: var(--blanco);
+        }
+
+        .home-link {
+            color: var(--texto);
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .home-link:hover {
+            color: var(--rosa);
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: 45px auto 65px;
+            padding: 30px 24px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--rosa);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-family: "Mochiy Pop One", sans-serif;
+            font-size: clamp(34px, 6vw, 66px);
+            line-height: 1.3;
+            color: var(--blanco);
+            text-shadow: 0 0 5px rgba(255,255,255,0.8),
+                         0 0 15px rgba(255,0,110,0.75),
+                         0 0 30px rgba(255,0,110,0.45),
+                         0 0 55px rgba(0,200,255,0.25);
+            margin-bottom: 16px;
+        }
+
+        .japanese-title {
+            font-size: clamp(16px, 2.5vw, 23px);
+            letter-spacing: 5px;
+            color: var(--rosa);
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(255,0,120,0.6);
+        }
+
+        .hero-description {
+            max-width: 690px;
+            margin: 0 auto;
+            color: var(--texto-suave);
+            font-size: 16px;
+        }
+
+        .quick-nav {
+            max-width: 1000px;
+            margin: 0 auto 90px;
+            padding: 0 24px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px 28px;
+        }
+
+        .quick-nav a {
+            color: var(--texto);
+            font-size: 14px;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
+        }
+
+        .quick-nav a:hover {
+            color: var(--rosa);
+            text-shadow: 0 0 12px rgba(255,0,120,0.7);
+        }
+
+        main {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            font-family: "Mochiy Pop One", sans-serif;
+            font-size: clamp(23px, 4vw, 34px);
+            color: var(--blanco);
+            margin-bottom: 12px;
+            text-shadow: 0 0 15px rgba(0,190,255,0.25);
+        }
+
+        .section-heading p {
+            max-width: 680px;
+            margin: 0 auto;
+            color: var(--texto-suave);
+            font-size: 14px;
+        }
+
+        .transport-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 42px 55px;
+        }
+
+        .transport-item {
+            padding: 10px 0 30px;
+            border-bottom: 1px solid var(--borde);
+            scroll-margin-top: 30px;
+        }
+
+        .item-number {
+            display: block;
+            color: var(--rosa);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .transport-item h3 {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--blanco);
+            margin-bottom: 12px;
+        }
+
+        .transport-item p {
+            color: var(--texto-suave);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .transport-item ul {
+            padding-left: 20px;
+            color: var(--texto-suave);
+            font-size: 14px;
+        }
+
+        .transport-item li {
+            margin-bottom: 7px;
+            padding-left: 3px;
+        }
+
+        .transport-item li::marker {
+            color: var(--rosa);
+        }
+
+        .tip {
+            margin-top: 17px;
+            padding-left: 14px;
+            border-left: 2px solid var(--rojo);
+            color: var(--texto);
+            font-size: 13px;
+        }
+
+        .tip strong {
+            color: var(--rosa);
+        }
+
+        .useful-links {
+            margin: 100px auto 0;
+            text-align: center;
+        }
+
+        .useful-links h2 {
+            font-family: "Mochiy Pop One", sans-serif;
+            font-size: clamp(22px, 4vw, 30px);
+            margin-bottom: 15px;
+        }
+
+        .useful-links > p {
+            color: var(--texto-suave);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .link-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px 30px;
+        }
+
+        .link-list a {
+            color: var(--rosa);
+            font-size: 14px;
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 120, 144, 0.4);
+            text-underline-offset: 5px;
+            transition: color 0.2s ease;
+        }
+
+        .link-list a:hover {
+            color: var(--blanco);
+        }
+
+        .site-navigation {
+            margin: 100px auto 50px;
+            text-align: center;
+        }
+
+        .site-navigation h2 {
+            font-family: "Mochiy Pop One", sans-serif;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .site-navigation-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px 28px;
+        }
+
+        .site-navigation-links a {
+            font-size: 14px;
+            color: var(--texto);
+            transition: color 0.2s ease;
+        }
+
+        .site-navigation-links a:hover {
+            color: var(--rosa);
+        }
+
+        footer {
+            margin-top: 70px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid var(--borde);
+            color: var(--texto-suave);
+            font-size: 12px;
+        }
+
+        footer a {
+            color: var(--rosa);
+        }
+
+        /* AJUSTES PARA EL MENÚ LATERAL */
+        body.menu-abierto {
+            overflow: hidden;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                background-attachment: scroll;
+            }
+
+            .topbar {
+                padding: 18px 5%;
+            }
+
+            .brand {
+                font-size: 14px;
+            }
+
+            .hero {
+                margin: 35px auto 45px;
+                padding: 20px 18px;
+            }
+
+            .japanese-title {
+                letter-spacing: 2px;
+            }
+
+            .quick-nav {
+                margin-bottom: 65px;
+                gap: 14px 22px;
+            }
+
+            main {
+                width: 88%;
+            }
+
+            .transport-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .transport-item h3 {
+                font-size: 20px;
+            }
+
+            .useful-links,
+            .site-navigation {
+                margin-top: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecera-mapa">
+        <div class="cabecera-contenido">
+            <div class="marca">
+                <span class="marca-icono" aria-hidden="true">🏯</span>
+                <span class="marca-texto"><span>JAPAN</span><span>SICKO TRIP</span></span>
+            </div>
+            <div class="cabecera-titulo">
+                <p class="titulo-japones">日本の交通 — KŌTSŪ</p>
+                <h1>Transporte</h1>
+                <p class="subtitulo-cabecera">GUÍA PRÁCTICA DE VIAJE</p>
+            </div>
+            <div aria-hidden="true"></div>
+        </div>
+    </header>
+
+    <section class="introduccion transporte-intro">
+        <div class="introduccion-texto">
+            <span class="etiqueta-seccion">MUÉVETE POR JAPÓN</span>
+            <h2>Explora cada rincón <span>conectado</span></h2>
+            <p>Trenes bala, metro, autobuses, tarjetas de transporte y rutas por carretera. Todo lo que necesitas para moverte por Japón y descubrir tanto las grandes ciudades como los rincones menos conocidos.</p>
+        </div>
+        <div class="introduccion-decoracion" aria-hidden="true">
+            <span class="decoracion-kanji">交通</span>
+            <span class="decoracion-punto punto-rosa"></span>
+            <span class="decoracion-punto punto-azul"></span>
+        </div>
+    </section>
+
+    <nav class="quick-nav" aria-label="Índice de transporte">
+        <a href="#trenes">01 · Trenes</a>
+        <a href="#metro">02 · Metro</a>
+        <a href="#tarjetas">03 · Tarjetas IC</a>
+        <a href="#autobuses">04 · Autobuses</a>
+        <a href="#especial">05 · Otros transportes</a>
+        <a href="#alquiler">06 · Alquiler</a>
+    </nav>
+
+    <main>
+
+        <div class="section-heading">
+            <h2>Cómo moverse por Japón</h2>
+            <p>
+                Seis categorías para organizar tus desplazamientos,
+                comparar alternativas y preparar las rutas de tu viaje.
+            </p>
+        </div>
+
+        <div class="transport-grid">
+
+            <section class="transport-item" id="trenes">
+                <span class="item-number">01 / RAILWAY</span>
+                <h3>Trenes y Shinkansen</h3>
+
+                <p>
+                    La red ferroviaria japonesa conecta las principales
+                    ciudades con trenes de alta velocidad, líneas
+                    regionales y servicios locales.
+                </p>
+
+                <ul>
+                    <li><strong>Shinkansen:</strong> trenes bala para viajar entre ciudades como Tokio, Kioto, Osaka e Hiroshima.</li>
+                    <li><strong>JR Pass:</strong> pase para determinados trenes de Japan Railways. Conviene comparar su precio con los billetes individuales.</li>
+                    <li><strong>Trenes Limited Express:</strong> servicios rápidos que conectan ciudades y regiones turísticas.</li>
+                    <li><strong>Trenes locales:</strong> útiles para descubrir pueblos, barrios y destinos fuera de las rutas principales.</li>
+                    <li><strong>Reservas:</strong> algunos servicios y determinados trenes requieren o recomiendan reservar asiento.</li>
+                </ul>
+
+                <p class="tip">
+                    <strong>Consejo:</strong> calcula los trayectos de tu itinerario
+                    antes de comprar un JR Pass. No siempre resulta más económico.
+                </p>
+            </section>
+
+            <section class="transport-item" id="metro">
+                <span class="item-number">02 / CITY TRANSIT</span>
+                <h3>Metro y trenes urbanos</h3>
+
+                <p>
+                    Para moverte dentro de las ciudades, el metro y los
+                    trenes de cercanías suelen ser las opciones más prácticas.
+                </p>
+
+                <ul>
+                    <li><strong>Tokio:</strong> combina líneas de Tokyo Metro, Toei y distintas compañías ferroviarias.</li>
+                    <li><strong>Osaka:</strong> su metro permite llegar a numerosos barrios, zonas comerciales y lugares de interés.</li>
+                    <li><strong>Kioto:</strong> dispone de metro y líneas de tren, aunque para algunos templos y zonas turísticas necesitarás autobuses.</li>
+                    <li><strong>Horarios:</strong> comprueba la última salida si vas a volver tarde al alojamiento.</li>
+                    <li><strong>Rutas:</strong> aplicaciones como Google Maps ayudan a consultar transbordos, andenes y horarios.</li>
+                </ul>
+
+                <p class="tip">
+                    <strong>Consejo:</strong> revisa la estación exacta de destino.
+                    En grandes ciudades, varias estaciones con nombres parecidos
+                    pueden estar bastante separadas.
+                </p>
+            </section>
+
+            <section class="transport-item" id="tarjetas">
+                <span class="item-number">03 / IC CARDS</span>
+                <h3>Suica, PASMO e ICOCA</h3>
+
+                <p>
+                    Las tarjetas IC permiten pagar muchos trayectos de
+                    transporte sin comprar un billete para cada viaje.
+                    También se aceptan en numerosos comercios y máquinas.
+                </p>
+
+                <ul>
+                    <li><strong>Suica:</strong> asociada principalmente a la red JR East y ampliamente aceptada en zonas compatibles.</li>
+                    <li><strong>PASMO:</strong> otra tarjeta de transporte muy utilizada en Tokio y alrededores.</li>
+                    <li><strong>ICOCA:</strong> especialmente conocida en la región de Kansai, incluida Osaka y Kioto.</li>
+                    <li><strong>Recargas:</strong> se pueden realizar en puntos habilitados; las opciones dependen de la tarjeta y del dispositivo.</li>
+                    <li><strong>Móvil:</strong> existen versiones digitales para dispositivos compatibles, con requisitos que conviene comprobar antes de viajar.</li>
+                </ul>
+
+                <p class="tip">
+                    <strong>Consejo:</strong> muchas tarjetas IC son interoperables
+                    entre regiones, pero no cubren absolutamente todos los
+                    transportes ni todos los trayectos.
+                </p>
+            </section>
+
+            <section class="transport-item" id="autobuses">
+                <span class="item-number">04 / BUS TRAVEL</span>
+                <h3>Autobuses y viajes nocturnos</h3>
+
+                <p>
+                    Los autobuses son una alternativa para llegar a lugares
+                    sin estación de tren cercana y, en determinados
+                    recorridos, ahorrar dinero.
+                </p>
+
+                <ul>
+                    <li><strong>Autobuses urbanos:</strong> muy útiles en ciudades como Kioto y en destinos rurales.</li>
+                    <li><strong>Autobuses de larga distancia:</strong> conectan muchas ciudades y zonas turísticas.</li>
+                    <li><strong>Autobuses nocturnos:</strong> permiten viajar mientras duermes y pueden reducir el gasto en alojamiento.</li>
+                    <li><strong>Equipaje:</strong> comprueba las dimensiones, los límites y las condiciones de transporte.</li>
+                    <li><strong>Reservas:</strong> los trayectos populares pueden agotarse, especialmente en festivos y temporadas altas.</li>
+                </ul>
+
+                <p class="tip">
+                    <strong>Consejo:</strong> compara el precio total y el tiempo
+                    de viaje con el tren, incluyendo los desplazamientos hasta
+                    las terminales de autobuses.
+                </p>
+            </section>
+
+            <section class="transport-item" id="especial">
+                <span class="item-number">05 / ALTERNATIVE ROUTES</span>
+                <h3>Ferris, aeropuertos y transporte local</h3>
+
+                <p>
+                    Japón también cuenta con transportes especiales para
+                    visitar islas, llegar desde los aeropuertos y explorar
+                    lugares alejados de las grandes redes ferroviarias.
+                </p>
+
+                <ul>
+                    <li><strong>Ferris:</strong> conexiones con islas y destinos costeros, según la región.</li>
+                    <li><strong>Traslados aeroportuarios:</strong> trenes, autobuses y otros servicios entre aeropuertos y ciudades.</li>
+                    <li><strong>Bicicletas:</strong> una alternativa para recorrer determinados barrios y zonas rurales.</li>
+                    <li><strong>Trenes turísticos:</strong> servicios especiales que permiten disfrutar del paisaje durante el recorrido.</li>
+                    <li><strong>Transporte rural:</strong> algunos destinos tienen pocos servicios diarios, por lo que es importante consultar los horarios.</li>
+                </ul>
+
+                <p class="tip">
+                    <strong>Consejo:</strong> en rutas rurales, comprueba el
+                    último transporte del día y prepara una alternativa si
+                    los servicios son poco frecuentes.
+                </p>
+            </section>
+
+            <section class="transport-item" id="alquiler">
+                <span class="item-number">06 / RENT A VEHICLE</span>
+                <h3>Alquiler de coche y moto</h3>
+
+                <p>
+                    Alquilar un vehículo puede ser una buena opción para
+                    explorar zonas rurales, recorrer carreteras panorámicas
+                    y visitar lugares a los que resulta difícil llegar
+                    en transporte público.
+                </p>
+
+                <ul>
+                    <li><strong>Coches:</strong> útiles para rutas por Hokkaido, pueblos de montaña y destinos alejados de las estaciones.</li>
+                    <li><strong>Motos y scooters:</strong> permiten recorrer ciertas zonas con libertad; la disponibilidad y los requisitos dependen del vehículo y de la empresa.</li>
+                    <li><strong>Permiso de conducir:</strong> comprueba antes del viaje qué documentación exige Japón para tu permiso español. Según el caso, puede ser necesario un permiso internacional conforme al convenio aplicable o una traducción oficial admitida.</li>
+                    <li><strong>Documentación:</strong> lleva el permiso válido, el pasaporte y los documentos adicionales que solicite la empresa.</li>
+                    <li><strong>Peajes:</strong> algunas autopistas tienen peaje. Consulta las condiciones de uso de ETC y los posibles dispositivos de alquiler.</li>
+                    <li><strong>Aparcamiento:</strong> en las ciudades puede ser caro y limitado; comprueba si el alojamiento dispone de aparcamiento.</li>
+                    <li><strong>Normas de circulación:</strong> se conduce por la izquierda y el volante suele estar en el lado derecho.</li>
+                    <li><strong>Seguro:</strong> revisa la cobertura, la franquicia y las condiciones de asistencia antes de reservar.</li>
+                </ul>
+
+                <p class="tip">
+                    <strong>Consejo:</strong> antes de reservar, confirma los
+                    requisitos legales vigentes con las autoridades japonesas
+                    y la empresa de alquiler. No des por hecho que tu permiso
+                    de conducir habitual es suficiente.
+                </p>
+            </section>
+
+        </div>
+
+        <section class="useful-links" id="enlaces">
+            <h2>Enlaces útiles</h2>
+
+            <p>
+                Consulta estas fuentes para planificar rutas, revisar
+                requisitos y comprobar condiciones antes de viajar.
+            </p>
+
+            <div class="link-list">
+                <a href="https://www.japan.travel/en/" target="_blank" rel="noopener noreferrer">
+                    Japan National Tourism Organization
+                </a>
+
+                <a href="https://japanrailpass.net/en/" target="_blank" rel="noopener noreferrer">
+                    Información oficial del Japan Rail Pass
+                </a>
+
+                <a href="https://www.jreast.co.jp/multi/en/" target="_blank" rel="noopener noreferrer">
+                    JR East
+                </a>
+
+                <a href="https://www.tokyometro.jp/en/" target="_blank" rel="noopener noreferrer">
+                    Tokyo Metro
+                </a>
+
+                <a href="https://www.westjr.co.jp/global/en/" target="_blank" rel="noopener noreferrer">
+                    JR West
+                </a>
+
+                <a href="https://www.npa.go.jp/english/" target="_blank" rel="noopener noreferrer">
+                    Policía Nacional de Japón
+                </a>
+
+                <a href="https://www.dgt.es/" target="_blank" rel="noopener noreferrer">
+                    Dirección General de Tráfico de España
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Japan Sicko Trip · Mi viaje por Japón</p>
+        <p>日本を旅しよう</p>
+    </footer>
+
+    <!-- MENÚ LATERAL COMPARTIDO: solo en esta sección -->
+    <script src="../menu.js"></script>
+
+</body>
+</html>

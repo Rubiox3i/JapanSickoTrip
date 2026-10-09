@@ -641,3 +641,278 @@ main {
     }
 
 }
+
+/* Identidad visual compartida y calendario legible en móvil */
+body {
+    background: linear-gradient(rgba(7, 7, 19, .83), rgba(7, 7, 19, .94) 40%, #090914),
+        url("../images/fondo-japon.jpg") center top / cover scroll no-repeat;
+    color: #fff;
+    font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+}
+
+.cabecera-mapa {
+    text-align: initial;
+}
+
+.cabecera-titulo h1 {
+    color: #fff;
+}
+
+main {
+    max-width: 1400px;
+    padding: 28px;
+}
+
+.intro,
+.calendario-section,
+.detalle-dia,
+.prefectura {
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 16px;
+    background: linear-gradient(120deg, rgba(21, 13, 37, .96), rgba(12, 17, 34, .94));
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .32);
+}
+
+.intro h2,
+.calendario-cabecera h2,
+.detalle-dia h2,
+.lista-cabecera h2,
+.detalle-festival h3,
+.festival-card h3 {
+    color: #fff;
+    font-family: "Mochiy Pop One", sans-serif;
+    line-height: 1.55;
+}
+
+.intro p,
+.lista-cabecera p,
+.detalle-festival p,
+.festival-localidad {
+    color: #ded9e5;
+}
+
+.aviso {
+    border: 1px solid rgba(66, 223, 255, .25);
+    background: rgba(66, 223, 255, .08);
+    color: #e6faff;
+}
+
+.dia {
+    border-color: rgba(255, 255, 255, .14);
+    background: rgba(6, 8, 22, .62);
+    color: #fff;
+}
+
+.dia:hover,
+.dia.con-festival {
+    border-color: rgba(255, 60, 158, .75);
+    background: rgba(255, 60, 158, .13);
+}
+
+.dia.vacio {
+    background: transparent;
+}
+
+.marca-festival,
+.punto-festival {
+    color: #ffb3dc;
+}
+
+.punto-festival {
+    background: #ff3c9e;
+    box-shadow: 0 0 9px rgba(255, 60, 158, .75);
+}
+
+.dias-semana div,
+.leyenda {
+    color: #c8c1d0;
+}
+
+.boton-mes,
+.boton-mapa {
+    border: 1px solid rgba(66, 223, 255, .4);
+    background: rgba(66, 223, 255, .1);
+    color: #e8fbff;
+}
+
+.boton-mes:hover,
+.boton-mapa:hover {
+    background: rgba(66, 223, 255, .2);
+}
+
+.detalle-festival,
+.prefectura-contenido {
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.etiqueta,
+.cantidad-festivales {
+    border: 1px solid rgba(255, 60, 158, .25);
+    background: rgba(255, 60, 158, .1);
+    color: #ffd5eb;
+}
+
+.prefectura-titulo {
+    background: rgba(9, 9, 20, .35);
+    color: #fff;
+}
+
+.prefectura-titulo:hover {
+    background: rgba(255, 60, 158, .09);
+}
+
+.prefectura-titulo::after {
+    color: #42dfff;
+}
+
+.festival-card {
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.festival-fecha {
+    color: #ffb3dc;
+}
+
+.festival-info {
+    color: #ded9e5;
+}
+
+.festival-imagen,
+.imagen-fuente {
+    background: rgba(5, 7, 19, .72);
+}
+
+.imagen-cargando,
+.imagen-no-disponible,
+.imagen-fuente {
+    color: #c8c1d0;
+}
+
+.imagen-fuente a {
+    color: #42dfff;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 18px 14px 30px;
+    }
+
+    .intro,
+    .calendario-section,
+    .detalle-dia {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .intro h2,
+    .lista-cabecera h2 {
+        font-size: 18px;
+    }
+
+    .intro p,
+    .aviso {
+        font-size: 13px;
+    }
+
+    .aviso {
+        padding: 12px;
+    }
+
+    .calendario-cabecera {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .calendario-cabecera h2 {
+        font-size: 19px;
+    }
+
+    .boton-mes {
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .dias-semana,
+    .calendario {
+        gap: 4px;
+    }
+
+    .dias-semana div {
+        padding: 7px 0;
+        font-size: 12px;
+    }
+
+    .dia {
+        display: flex;
+        min-width: 0;
+        min-height: 48px;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 8px 2px;
+        border-radius: 8px;
+        font-size: 13px;
+    }
+
+    .dia.con-festival {
+        box-shadow: inset 0 0 0 1px rgba(255, 60, 158, .12);
+    }
+
+    .marca-festival {
+        display: none;
+    }
+
+    .dia.con-festival::after {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #ff3c9e;
+        box-shadow: 0 0 8px rgba(255, 60, 158, .75);
+        content: "";
+        transform: translateX(-50%);
+    }
+
+    .detalle-dia {
+        margin-top: 16px;
+    }
+
+    .detalle-festival {
+        padding: 18px 0;
+    }
+
+    .detalle-festival h3,
+    .festival-card h3 {
+        font-size: 19px;
+    }
+
+    .lista-section {
+        margin-top: 22px;
+    }
+
+    .prefectura-titulo {
+        gap: 8px;
+        padding: 16px 13px;
+        font-size: 15px;
+    }
+
+    .cantidad-festivales {
+        margin-right: 0;
+        font-size: 10px;
+    }
+
+    .festival-card {
+        padding: 16px 13px;
+    }
+
+    .festival-imagen img {
+        max-height: 280px;
+    }
+
+    .boton-mapa {
+        min-height: 44px;
+        padding: 10px 13px;
+    }
+}
