@@ -293,6 +293,7 @@ function crearTarjeta(artista, numero) {
                     src="${artista.imagen}"
                     alt="Foto de ${artista.nombre}"
                     loading="lazy"
+                    decoding="async"
                     onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;imagen-fallback&quot;><span>🎵</span><small>Imagen no disponible</small></div>';"
                 >
 

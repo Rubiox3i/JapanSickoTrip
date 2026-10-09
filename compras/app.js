@@ -1311,6 +1311,7 @@ function crearTarjeta(producto) {
                     src="${rutaImagen}"
                     alt="Foto de ${producto.nombre}"
                     loading="lazy"
+                    decoding="async"
                     onerror="
                         this.style.display='none';
                         this.parentElement.innerHTML =

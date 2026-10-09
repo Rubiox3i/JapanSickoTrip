@@ -563,7 +563,7 @@ main {
 }
 
 /* Tema Japan Sicko Trip, en línea con el mapa interactivo. */
-body { color:#fff; font-family:"Zen Kaku Gothic Antique",Arial,sans-serif; background:linear-gradient(rgba(7,7,19,.83),rgba(7,7,19,.94) 40%,#090914),url("../images/fondo-japon.jpg") center top/cover fixed no-repeat; }
+body { color:#fff; font-family:"Zen Kaku Gothic Antique",Arial,sans-serif; background:linear-gradient(rgba(7,7,19,.83),rgba(7,7,19,.94) 40%,#090914),url("../images/fondo-japon.jpg") center top/cover scroll no-repeat; }
 main { width:100%; max-width:1400px; padding:28px 28px 42px; }
 .introduccion.intro { min-height:210px; margin:0 0 26px; padding:30px 38px; border:1px solid rgba(255,255,255,.12); border-radius:16px; background:linear-gradient(110deg,rgba(21,13,37,.94),rgba(12,17,34,.9)); box-shadow:0 15px 45px rgba(0,0,0,.32); }
 .introduccion.intro h2 { margin:0 0 10px; color:#fff; font-family:"Mochiy Pop One",sans-serif; font-size:clamp(22px,3vw,33px); line-height:1.55; }

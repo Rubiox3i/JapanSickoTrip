@@ -934,7 +934,7 @@ async function buscarImagenFestival(
 
             iiprop: "url|extmetadata",
 
-            iiurlwidth: "1000",
+            iiurlwidth: "640",
 
             format: "json",
 
@@ -1142,29 +1142,9 @@ function crearContenedorImagen(
    ========================================================= */
 
 async function cargarImagenFestival(
-    festival
+    festival,
+    contenedor
 ) {
-
-    const id =
-        "imagen-" +
-        festival.nombre
-            .normalize("NFD")
-            .replace(
-                /[\u0300-\u036f]/g,
-                ""
-            )
-            .replace(
-                /[^a-zA-Z0-9]/g,
-                "-"
-            );
-
-
-    const contenedor =
-        document.getElementById(
-            id
-        );
-
-
     if (!contenedor) {
 
         return;
@@ -1208,6 +1188,7 @@ async function cargarImagenFestival(
                 src="${resultado.imagen}"
                 alt="${festival.nombre}"
                 loading="lazy"
+                decoding="async"
             >
 
         </a>
@@ -1231,6 +1212,43 @@ async function cargarImagenFestival(
 
     `;
 
+}
+
+
+const observadorImagenesFestivales =
+    "IntersectionObserver" in window
+        ? new IntersectionObserver(
+            entradas => {
+                entradas.forEach(entrada => {
+                    if (!entrada.isIntersecting) {
+                        return;
+                    }
+
+                    observadorImagenesFestivales.unobserve(
+                        entrada.target
+                    );
+                    cargarImagenFestival(
+                        entrada.target._festival,
+                        entrada.target
+                    );
+                });
+            },
+            { rootMargin: "250px 0px" }
+        )
+        : null;
+
+
+function observarImagenFestival(festival, contenedor) {
+    if (!contenedor) {
+        return;
+    }
+
+    contenedor._festival = festival;
+    if (observadorImagenesFestivales) {
+        observadorImagenesFestivales.observe(contenedor);
+    } else {
+        cargarImagenFestival(festival, contenedor);
+    }
 }
 
 
@@ -1628,8 +1646,9 @@ function mostrarDia(
             `;
 
 
-            cargarImagenFestival(
-                festival
+            observarImagenFestival(
+                festival,
+                detalleDia.lastElementChild?.querySelector(".festival-imagen")
             );
 
         }
@@ -1891,20 +1910,9 @@ function crearLista() {
                         );
 
 
-                        /*
-                         * Cargar fotografía una vez
-                         * creada la tarjeta.
-                         */
-
-                        setTimeout(
-                            () => {
-
-                                cargarImagenFestival(
-                                    festival
-                                );
-
-                            },
-                            0
+                        observarImagenFestival(
+                            festival,
+                            tarjeta.querySelector(".festival-imagen")
                         );
 
                     }

@@ -626,6 +626,7 @@ function crearTarjeta(
                     src="${tienda.foto}"
                     alt="Foto de ${tienda.nombre}"
                     loading="lazy"
+                    decoding="async"
                     onerror="
                         this.style.display='none';
                         this.parentElement.innerHTML =

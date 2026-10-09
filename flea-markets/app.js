@@ -267,6 +267,7 @@ function crearTarjeta(mercado, numero) {
                     src="${mercado.foto}"
                     alt="Foto de ${mercado.nombre}"
                     loading="lazy"
+                    decoding="async"
                     onerror="
                         this.style.display='none';
                         this.parentElement.innerHTML =
